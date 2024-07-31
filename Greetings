@@ -1,3 +1,5 @@
+#Greetings at time of the day
+
 import time
 
 name1 = input("Whats the users name: ")
