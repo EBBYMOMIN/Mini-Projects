@@ -1,0 +1,18 @@
+import time
+
+name1 = input("Whats the users name: ")
+name = name1.capitalize()
+
+currenttime = int(time.strftime("%H"))
+
+if 6 <= currenttime < 12:
+    print("Good Morning", name , "its", currenttime)
+
+elif 12 <= currenttime < 4:
+    print("Good Afternoon", name , "its" , currenttime)
+
+elif 4 <= currenttime <9:
+    print("Good Evening", name , "its", currenttime)
+
+else:
+    print("Good Night", name , "its", currenttime)
