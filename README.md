@@ -1,1 +1,1 @@
-# Practice Codes.
+MINI PROJECTS USING PYTHON
