@@ -1,0 +1,4 @@
+import qrcode as qr
+
+img = qr.make("https://www.linkedin.com/in/ebadmomin/")
+img.save("My_LinkedIn_profile.png")
