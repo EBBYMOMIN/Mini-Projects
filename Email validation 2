@@ -1,0 +1,13 @@
+import re
+
+# Using a raw string to avoid escape sequence warnings
+email_condition = r"^[a-z]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
+
+user_email = input("Enter your Email: ")
+
+print(user_email)
+
+if re.search(email_condition, user_email):
+    print("Right Email.")
+else:
+    print("Wrong Email.")
