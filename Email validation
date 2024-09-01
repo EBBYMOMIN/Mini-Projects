@@ -1,0 +1,38 @@
+email = input("Enter your Email: ")  # Closest condition g@g.in , ebadmomin@gmail.com
+
+# Check if the email has the minimum required length
+if len(email) >= 6:
+    # Check if the first character is a letter
+    if email[0].isalpha():
+        # Check if there's exactly one "@" symbol in the email
+        if ("@" in email) and (email.count("@") == 1):
+            # Check if there's a dot at the correct position
+            if email[-4] == "." or email[-3] == ".":
+                # Check for invalid characters
+                for char in email:
+                    if char.isspace():
+                        print("Wrong Email: contains whitespace")
+                        break
+                    elif char.isalpha():
+                        if char.isupper():  # Check if there are uppercase letters
+                            print("Wrong Email: contains uppercase letters")
+                            break
+                    elif char.isdigit():
+                        continue
+                    elif char in ["_", ".", "@"]:
+                        continue
+                    else:
+                        print("Wrong Email: contains invalid characters")
+                        break
+                else:
+                    print("Valid Email")
+            else:
+                print("Wrong Email: missing or incorrectly placed dot")
+        else:
+            print("Wrong Email: missing or multiple '@' symbols")
+    else:
+        print("Wrong Email: must start with a letter")
+else:
+    print("Wrong Email: too short")
+
+print(email)
